@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap" rel="stylesheet">
+
+    <title>Salad Bowl</title>
+</head>
+<body>
+    <h1>&#129367; Salad Bowl &#129367;</h1>
+    <div id="wholeWrapper">
+    
+        <div>
+            <p id='activeIndicator1'>&#128071;</p>
+            <h3 id='team1Points'>Team 1 Score: 0</h3>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div id='phase1'>
+            <h2>Before We Begin</h2>
+            <p>FOUR times per person: enter a word and press next</p>
+            <p>Then pass it on to the next person who will do the same</p>
+            <input type='text' id='wordInput' name='wordInput' placeholder='Your word here'>
+            <br><br>
+            <button type='button' id='nextWord' onclick='nextWord()'>Next</button>
+
+            <br><br><br>
+            <p>When EVERYONE is done adding words, press the done button:</p>
+            <button type='button' id='doneButton' onclick='doneButton()'>Done</button>
+        </div>
+
+        <div id='phase2'>
+            <h2 id='roundTitleText'>Round One:</h2>
+            <p id='roundDescriptionText'></pid>Catchphrase style</p>
+            <br><br>
+
+            <button type='button' id='startTurn' onclick='startTurn()'>Start My Turn</button>
+            <button type='button' id='endTurn' onclick='endTurn()'>End My Turn</button>
+            <button type='button' id='startNextRound' onclick='startNextRound()'>Start Next Round</button>
+
+            <div id='end'>
+                <h2 id='winnerText'>Game Over!</h2>
+                <p>To start a new game please refresh the page</p>
+            </div>
+
+            <h2 id='timerText'>00</h2>
+            <div id='secretWordDiv'>
+                <p>Your word is:</p>
+                <h1 id='secretWord'></h1>
+            </div>
+
+            <button type='button' id='addPointButton' onclick='addPoint()'>Correct Guess</button>
+            <p id='gotLastWord'>&#11088; You got the last word! NICE! &#11088;</p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div>
+            <p id='activeIndicator2'>&#128071;</p>  
+            <h3 id='team2Points'>Team 2 Score: 0</h3>
+        </div>
+
+    </div>
+
+    
+    <!-- moved script source to body so that popups begin after page title has a chance to load -->
+    <script src="client.js"></script>
+</body>
+</html>
